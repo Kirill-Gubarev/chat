@@ -6,6 +6,8 @@ add_executable(${PROJECT_NAME}
 	src/network/client.cpp
 	src/network/server.h
 	src/network/server.cpp
+	src/network/common.h
+	src/network/common.cpp
 )
 target_include_directories(${PROJECT_NAME}
 	PRIVATE
