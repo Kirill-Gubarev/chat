@@ -1,6 +1,8 @@
-#define _WIN32_WINNT 0x0A00
-#include <iostream>
-#include <asio.hpp>
+#ifndef CLIENT_H
+#define CLIENT_H
+
+#include "common.h"
+
 namespace net {
 	class Client {
 	private:
@@ -15,3 +17,5 @@ namespace net {
 		void mainLoop();
 	};
 }
+
+#endif //END FILE

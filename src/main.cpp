@@ -1,5 +1,3 @@
-#include <iostream>
-#include <stdint.h>
 #include "network/client.h"
 #include "network/server.h"
 uint32_t readNumber() {
@@ -36,7 +34,6 @@ void runServer() {
 	std::cout << "Enter port:" << std::endl;
 	port = readNumber();
 	net::Server server(port);
-	server.mainLoop();
 }
 
 int main() {
@@ -49,6 +46,5 @@ int main() {
 		else if (input == 2)
 			runServer();
 	} while (input != 1 && input != 2);
-	system("pause");
-	return 0;
+	net::exitProgram(0,"end of the program");
 }

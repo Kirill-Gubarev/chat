@@ -20,8 +20,8 @@ void net::Client::mainLoop() {
 			(std::cout << "SERVER: ").write(buf.data(), len) << std::endl;
 		}
 	}
-	catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+	catch (std::exception& ex) {
+		net::exitProgram(-1, ex);
 	}
 }
 void net::Client::sendMessage() {
